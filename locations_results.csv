@@ -1,0 +1,83 @@
+School,Region,Campus Size
+California Institute of Technology,farwest,City: Midsize
+Stanford University,farwest,Suburb: Large
+Pomona College,farwest,Suburb: Large
+Claremont McKenna College,farwest,Suburb: Large
+University of Southern California,farwest,City: Large
+Harvey Mudd College,farwest,Suburb: Large
+Pitzer College,farwest,Suburb: Large
+Scripps College,farwest,Suburb: Large
+California Institute of the Arts,farwest,Suburb: Large
+University of Chicago,greatlakes,City: Large
+Northwestern University,greatlakes,City: Small
+University of Notre Dame,greatlakes,Suburb: Large
+Hillsdale College,greatlakes,Town: Distant
+Denison University,greatlakes,Suburb: Small
+Case Western Reserve University,greatlakes,City: Large
+Columbia University,mideast,City: Large
+Curtis Institute of Music,mideast,City: Large
+Princeton University,mideast,City: Small
+Cornell University,mideast,City: Small
+Johns Hopkins University,mideast,City: Large
+Swarthmore College,mideast,Suburb: Large
+University of Pennsylvania,mideast,City: Large
+Barnard College,mideast,City: Large
+Juilliard School,mideast,City: Large
+Carnegie Mellon University,mideast,City: Large
+United States Naval Academy,mideast,Suburb: Large
+Colgate University,mideast,Town: Distant
+Georgetown University,mideast,City: Large
+Hamilton College,mideast,Suburb: Midsize
+New York University,mideast,City: Large
+Haverford College,mideast,Suburb: Large
+Vassar College,mideast,Suburb: Large
+Webb Institute,mideast,Suburb: Large
+Cooper Union for the Advancement of Science and Art,mideast,City: Large
+Villanova University,mideast,Suburb: Large
+Skidmore College,mideast,Suburb: Small
+United States Merchant Marine Academy,mideast,Suburb: Large
+Harvard University,newengland,City: Midsize
+Massachusetts Institute of Technology,newengland,City: Midsize
+Brown University,newengland,City: Midsize
+Yale University,newengland,City: Midsize
+Dartmouth College,newengland,Town: Remote
+Amherst College,newengland,Suburb: Large
+Northeastern University,newengland,City: Large
+Colby College,newengland,Town: Remote
+Williams College,newengland,Town: Fringe
+Bowdoin College,newengland,Town: Fringe
+Tufts University,newengland,Suburb: Large
+Middlebury College,newengland,Town: Distant
+Bates College,newengland,City: Small
+Boston University,newengland,City: Large
+Wellesley College,newengland,Suburb: Large
+Wesleyan University,newengland,City: Small
+Boston College,newengland,City: Small
+Rhode Island School of Design,newengland,City: Midsize
+Babson College,newengland,Suburb: Large
+Smith College,newengland,Suburb: Large
+Grinnell College,plains,Town: Remote
+Carleton College,plains,Town: Distant
+College of the Ozarks,plains,Town: Distant
+Macalester College,plains,City: Large
+United States Air Force Academy,rockymountains,Town: Fringe
+Colorado College,rockymountains,City: Large
+Duke University,southeast,City: Large
+Vanderbilt University,southeast,City: Large
+Emory University,southeast,Suburb: Large
+Tulane University,southeast,City: Large
+Davidson College,southeast,Suburb: Large
+Georgia Institute of Technology,southeast,City: Large
+University of North Carolina at Chapel Hill,southeast,City: Small
+Washington and Lee University,southeast,Town: Distant
+University of Miami,southeast,City: Small
+University of Virginia,southeast,Suburb: Small
+Wake Forest University,southeast,City: Midsize
+University of Florida,southeast,City: Midsize
+University of Richmond,southeast,City: Midsize
+Berea College,southeast,Town: Distant
+Florida State University,southeast,City: Midsize
+University of Tampa,southeast,City: Large
+Spelman College,southeast,City: Large
+Tuskegee University,southeast,Town: Distant
+Rice University,southwest,City: Large
