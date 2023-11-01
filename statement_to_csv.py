@@ -15,7 +15,7 @@ SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
 
 # The ID and range of a sample spreadsheet.
 SAMPLE_SPREADSHEET_ID = "1y3tv2tQB9bNBCungTh_Zb3zK2yUMPGEG9YQDi0qpDUM"
-SAMPLE_RANGE_NAME = 'Top 100 - Lowest Acceptance Rate!A2:L100'
+SAMPLE_RANGE_NAME = 'Top 100 - Lowest Acceptance Rate!A3:M102'
 
 
 def main():
@@ -73,7 +73,6 @@ def main():
 
     except HttpError as err:
         print(err)
-
 
 if __name__ == '__main__':
     main()

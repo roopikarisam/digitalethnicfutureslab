@@ -2,7 +2,7 @@ import os
 import pandas as pd
 
 # Specify the directory containing the CSV files for each region
-data_directory = r"C:\Users\mc505\Downloads\College_Info_Program\Data_Directory"
+data_directory = 'data_directory'
 
 
 # list of colleges
