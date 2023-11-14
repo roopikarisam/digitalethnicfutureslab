@@ -93,10 +93,3 @@ print(sentiment_counts)
 region_sentiment_counts = df.groupby(['region', 'sentiment_category']).size().unstack().fillna(0)
 print("Sentiment Category Distribution by Region:")
 print(region_sentiment_counts)
-
-# Print colleges with the 10 highest and lowest sentiment scores
-print("Top 10 Colleges with Highest Sentiment Scores:")
-print(desc_sorted_df[:10])
-
-print("Top 10 Colleges with Lowest Sentiment Scores:")
-print(asc_sorted_df[:10])
