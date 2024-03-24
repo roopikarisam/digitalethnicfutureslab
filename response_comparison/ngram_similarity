@@ -1,0 +1,64 @@
+import os
+import pandas as pd
+from nltk import ngrams, FreqDist, word_tokenize
+from nltk.corpus import stopwords
+import string
+import nltk
+
+nltk.download('stopwords')
+nltk.download('punkt')
+
+stop_words = set(stopwords.words('english'))
+
+csv_directory = '../csv_files'
+text_to_compare = 'GPT.csv'
+
+# Read and preprocess the text to compare
+with open(text_to_compare, 'r', encoding='utf-8') as file:
+    text = file.read()
+text_tokens = word_tokenize(text.lower())
+text_tokens = [word for word in text_tokens if word not in stop_words]
+
+def pre_process(text):
+    text = text.lower()
+    text = text.translate(str.maketrans("", "", string.punctuation))
+    tokens = word_tokenize(text)
+    tokens = [word for word in tokens if word not in stop_words]
+    return tokens
+
+# Function to calculate n-grams
+def calculate_ngrams(tokens, n):
+    n_grams = ngrams(tokens, n)
+    # Filter out n-grams containing punctuation
+    n_grams_no_punct = [gram for gram in n_grams if all(word.isalnum() or word in string.whitespace for word in gram)]
+    return FreqDist(n_grams_no_punct)
+
+# Function to compute Jaccard similarity between two sets of tokens
+def compute_jaccard_similarity(set1, set2):
+    intersection = len(set1.intersection(set2))
+    union = len(set1.union(set2))
+    return intersection / union if union != 0 else 0
+
+# Calculate similarity for each file in the directory
+similarity_scores = []
+for filename in os.listdir(csv_directory):
+    file_path = os.path.join(csv_directory, filename)
+    if os.path.isfile(file_path):
+        with open(file_path, 'r', encoding='utf-8') as file:
+            corpus = file.read()
+        tokens = pre_process(corpus)
+        n = 2  # adjustable
+        ngram_freq_dist = calculate_ngrams(tokens, n)
+        text_to_compare_ngrams = calculate_ngrams(text_tokens, n)
+        similarity = compute_jaccard_similarity(set(ngram_freq_dist.keys()), set(text_to_compare_ngrams.keys()))
+        # Get some matching n-grams
+        matching_ngrams = list(set(ngram_freq_dist).intersection(set(text_to_compare_ngrams)))[:3]
+        similarity_scores.append((filename, similarity, matching_ngrams))
+
+# Sort similarity scores in descending order
+similarity_scores.sort(key=lambda x: x[1], reverse=True)
+
+# Print the top similar files along with some matching n-grams
+print("Top similar files:")
+for file, score, matching_ngrams in similarity_scores[:5]:
+    print(f"File: {file}, Similarity Score: {score}, Matching N-grams: {matching_ngrams}")
